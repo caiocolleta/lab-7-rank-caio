@@ -9,4 +9,25 @@ output: html_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-Hi this is Caio and I created this repo and markdown docuemnt
+Hi this is Caio and I created this repo and markdown document
+
+COLLABORATOR (TERESA) is going to make some histograms.
+
+```{r}
+
+# load packages and read in data
+
+library (tidyverse)
+
+kermit <- read_csv("kermit.csv")
+
+# make a histogram 
+
+kermit_hist <- ggplot(kermit, aes(x=Score.pre)) +
+  geom_histogram() +
+  facet_wrap(~ Gender)
+
+
+kermit_hist
+```
+
